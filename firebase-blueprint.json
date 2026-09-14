@@ -1,0 +1,157 @@
+{
+  "entities": {
+    "members": {
+      "title": "Members",
+      "description": "Registered students and members of MSSN FUD",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "membershipId": { "type": "string" },
+        "fullName": { "type": "string" },
+        "matricNumber": { "type": "string" },
+        "faculty": { "type": "string" },
+        "department": { "type": "string" },
+        "level": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "stateOfOrigin": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "committeePreference": { "type": "string" },
+        "secondaryCommittee": { "type": "string" },
+        "session": { "type": "string" },
+        "registrationDate": { "type": "string" },
+        "status": { "type": "string" },
+        "securityHash": { "type": "string" }
+      },
+      "required": ["membershipId", "fullName", "matricNumber", "email", "faculty", "department", "session"]
+    },
+    "sessions": {
+      "title": "Academic Sessions",
+      "description": "MSSN FUD academic sessions (e.g. 2026/2027)",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "isCurrent": { "type": "boolean" },
+        "theme": { "type": "string" },
+        "startYear": { "type": "number" },
+        "endYear": { "type": "number" },
+        "startDate": { "type": "string" },
+        "endDate": { "type": "string" }
+      },
+      "required": ["name", "isCurrent"]
+    },
+    "executives": {
+      "title": "Executives",
+      "description": "Executive council members per session",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "portfolio": { "type": "string" },
+        "department": { "type": "string" },
+        "faculty": { "type": "string" },
+        "level": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "session": { "type": "string" },
+        "order": { "type": "number" }
+      },
+      "required": ["name", "portfolio", "session"]
+    },
+    "events": {
+      "title": "Events & Programs",
+      "description": "Halqahs, seminars, orientation, and public lectures",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "venue": { "type": "string" },
+        "speaker": { "type": "string" },
+        "description": { "type": "string" },
+        "session": { "type": "string" },
+        "flyerUrl": { "type": "string" },
+        "images": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["title", "date", "venue"]
+    },
+    "articles": {
+      "title": "Articles & Islamic Insights",
+      "description": "Islamic articles, sermons, and publications",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "author": { "type": "string" },
+        "authorTitle": { "type": "string" },
+        "date": { "type": "string" },
+        "readTime": { "type": "string" },
+        "summary": { "type": "string" },
+        "content": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" }
+      },
+      "required": ["title", "content", "author"]
+    },
+    "donations": {
+      "title": "Donation Records",
+      "description": "Verified and pending online and bank transfer donations",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "donorName": { "type": "string" },
+        "donorEmail": { "type": "string" },
+        "donorPhone": { "type": "string" },
+        "amount": { "type": "number" },
+        "causeId": { "type": "string" },
+        "causeTitle": { "type": "string" },
+        "paymentMethod": { "type": "string" },
+        "referenceNumber": { "type": "string" },
+        "date": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["donorName", "amount", "causeTitle"]
+    },
+    "causes": {
+      "title": "Donation Causes",
+      "description": "Active fundraising campaigns and charity projects",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "urgency": { "type": "string" },
+        "targetAmount": { "type": "number" },
+        "raisedAmount": { "type": "number" },
+        "description": { "type": "string" },
+        "bankAccount": { "type": "object" },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["title", "targetAmount"]
+    },
+    "site_content": {
+      "title": "Site Content & Settings",
+      "description": "Live configuration for registration status and notices",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "isRegistrationOpen": { "type": "boolean" },
+        "registrationNotice": { "type": "string" },
+        "contactEmail": { "type": "string" },
+        "contactPhone": { "type": "string" },
+        "secretariatAddress": { "type": "string" },
+        "tiktokUrl": { "type": "string" },
+        "facebookUrl": { "type": "string" },
+        "twitterUrl": { "type": "string" },
+        "whatsappUrl": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "MSSNFUD Web Platform & Member Portal",
+  "description": "Official web platform, digital e-ID registration, and role-based administration portal for the Muslim Students' Society of Nigeria (MSSN), Federal University Dutse Chapter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
